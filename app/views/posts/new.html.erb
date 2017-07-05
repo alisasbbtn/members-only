@@ -1,0 +1,12 @@
+<%= provide(:title, 'new post') %>
+
+<div class="row">
+  <div class="col-sm-4 text-right">
+    <h1>new post</h1>
+  </div>
+
+  <div class="col-sm-6">
+    <%= render 'shared/errors', object: @post %>
+    <%= render 'form' %>
+  </div>
+</div>

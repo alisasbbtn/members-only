@@ -1,0 +1,21 @@
+<% user = User.find(post.user_id) %>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h4><% if logged_in? %>
+      <%= user.name %>
+    <% end %>
+    <small><%= "#{time_ago_in_words(post.created_at)} ago" %>
+    </small>
+    </h4>
+  </div>
+  <div class="panel-body">
+    <h2 class="text-lowercase">
+      <p><%= post.title %></p>
+    </h2>
+
+    <div>
+      <%= simple_format(post.body)%>
+    </div>
+  </div>
+</div>
