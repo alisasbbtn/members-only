@@ -8,7 +8,7 @@ class PostsController < ApplicationController
   def create
     @post = current_user.posts.build(post_params)
     if @post.save
-      flash[:success] = "successfully posted \"#{@post.title}\""
+      flash[:success] = "successfully posted \"#{@post.title}\"."
       redirect_to posts_path
     else
       render 'new'

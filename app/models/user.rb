@@ -22,12 +22,13 @@ class User < ApplicationRecord
     end
   end
 
-private
-  def downcase_email
-    self.email.downcase!
-  end
+  private
 
-  def create_remember_token
-    self.remember_token = User.new_token
-  end
+    def downcase_email
+      self.email.downcase!
+    end
+
+    def create_remember_token
+      self.remember_token = User.new_token
+    end
 end

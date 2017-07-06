@@ -1,56 +1,29 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
-
 /* typography */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  line-height: 1;
-}
-
-h1 {
-  font-size: 3em;
-  letter-spacing: -2px;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-h2, h3 {
-  letter-spacing: -1px;
-  margin-bottom: 20px;
-  text-align: center;
+h3 {
+  margin-bottom: 10px;
   font-weight: normal;
-}
-
-h2{
-  font-size: 2em;
-}
-
-h3{
+  line-height: 1;
   font-size: 1.5em;
-  color: $gray-light;
 }
 
 p {
   font-size: 1em;
   line-height: 1.2em;
 }
-
 /* navbar */
-.navbar-inverse .navbar-brand{
+.navbar-inverse .navbar-brand {
   color: white;
   letter-spacing: -1px;
   font-weight: bold;
 }
-
 /* footer */
 html {
   position: relative;
   min-height: 100%;
 }
+
 body {
   margin-bottom: 75px;
 }
@@ -66,13 +39,55 @@ body {
     margin: 20px 0;
   }
 }
+/* errors */
+ul.alert {
+  list-style: none;
+}
+/* pagination */
+.pagination {
+  ul {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+  }
 
-/* pick date */
-.date{
-  margin-bottom: 3px;
+  li {
+    display: inline;
+
+    a {
+      color: black;
+      float: left;
+      padding: 8px 16px;
+      text-decoration: none;
+    }
+  }
 }
 
-/* errors */
-ul.alert{
-  list-style: none;
+.pagination li.active a,
+.pagination li:hover.active a {
+  background-color: $brand-danger;
+  border-color: #d43f3a;
+  color: white;
+}
+
+.pagination li:hover:not(.active) a {
+  background-color: #ddd;
+  color: black;
+}
+/* links */
+a {
+  color: $brand-danger;
+}
+/* panel header */
+.panel-default {
+  border-color: #d43f3a;
+
+  .panel-heading {
+    background-color: $brand-danger;
+  }
+
+  .panel-heading,
+  small {
+    color: white;
+  }
 }
